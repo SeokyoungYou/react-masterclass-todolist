@@ -1,21 +1,23 @@
 import { useForm } from "react-hook-form";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { categoryState, toDoState, TODOS_LS } from "../atoms";
-
+import { categoryState, IToDo, toDoState, TODOS_LS } from "../atoms";
 interface IForm {
   toDo: string;
 }
 
+export let toDos = new Array<IToDo>();
 function CreateToDo() {
-  const [currentToDos, setToDos] = useRecoilState(toDoState);
+  const saveToDos = () => {
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+  };
+  const setToDos = useSetRecoilState(toDoState);
   const category = useRecoilValue(categoryState);
   const { register, handleSubmit, setValue } = useForm<IForm>();
   const handleValid = ({ toDo }: IForm) => {
-    setToDos((oldToDos) => [
-      { text: toDo, id: Date.now(), category },
-      ...oldToDos,
-    ]);
-    localStorage.setItem(TODOS_LS, JSON.stringify(currentToDos));
+    const newTodo = { text: toDo, id: Date.now(), category };
+    setToDos((oldToDos) => [newTodo, ...oldToDos]);
+    toDos.push(newTodo);
+    saveToDos();
     setValue("toDo", "");
   };
   return (
@@ -29,6 +31,11 @@ function CreateToDo() {
       <button>Add to do</button>
     </form>
   );
+}
+const savedToDos = localStorage.getItem(TODOS_LS);
+if (savedToDos !== null) {
+  const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
 }
 
 export default CreateToDo;

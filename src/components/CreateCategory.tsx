@@ -9,6 +9,7 @@ function CreateCategory() {
   const { register, handleSubmit, setValue } = useForm<IForm>();
   const handleValid = ({ category }: IForm) => {
     Object.assign(Categories, { [category]: category });
+    setValue("category", "");
   };
   return (
     <form onSubmit={handleSubmit(handleValid)}>
