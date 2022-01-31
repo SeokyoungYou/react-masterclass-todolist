@@ -1,5 +1,6 @@
 import { useSetRecoilState } from "recoil";
 import { Categories, IToDo, toDoState, TODOS_LS } from "../atoms";
+import { cats } from "./CreateCategory";
 
 function ToDo({ text, category, id }: IToDo) {
   const setToDos = useSetRecoilState(toDoState);
@@ -22,7 +23,7 @@ function ToDo({ text, category, id }: IToDo) {
   return (
     <li>
       <span>{text}</span>
-      {Object.keys(Categories).map(
+      {Object.keys(cats).map(
         (Cat) =>
           category !== Cat && (
             <button name={Cat} onClick={onClick}>

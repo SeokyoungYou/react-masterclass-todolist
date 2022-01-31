@@ -1,14 +1,17 @@
 import { useForm } from "react-hook-form";
 import { useSetRecoilState } from "recoil";
-import { Categories, categoryState } from "../atoms";
+import { Categories, categoryState, CATS_LS } from "../atoms";
 
 interface IForm {
   category: string;
 }
+export let cats = {};
 function CreateCategory() {
   const { register, handleSubmit, setValue } = useForm<IForm>();
   const handleValid = ({ category }: IForm) => {
     Object.assign(Categories, { [category]: category });
+    Object.assign(cats, Categories);
+    localStorage.setItem(CATS_LS, JSON.stringify(cats));
     setValue("category", "");
   };
   return (
@@ -21,5 +24,9 @@ function CreateCategory() {
     </form>
   );
 }
-
+const savedCats = localStorage.getItem(CATS_LS);
+if (savedCats !== null) {
+  const parsedCats = JSON.parse(savedCats);
+  cats = parsedCats;
+}
 export default CreateCategory;
