@@ -6,6 +6,7 @@ interface IForm {
   category: string;
 }
 export let cats = {};
+Object.assign(cats, Categories);
 function CreateCategory() {
   const { register, handleSubmit, setValue } = useForm<IForm>();
   const handleValid = ({ category }: IForm) => {
