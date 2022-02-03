@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/react-masterclass-todolist/static/js/main.344b0e92.chunk.js",
-    "main.js.map": "/react-masterclass-todolist/static/js/main.344b0e92.chunk.js.map",
-    "runtime-main.js": "/react-masterclass-todolist/static/js/runtime-main.aad73123.js",
-    "runtime-main.js.map": "/react-masterclass-todolist/static/js/runtime-main.aad73123.js.map",
-    "static/js/2.a17e0fae.chunk.js": "/react-masterclass-todolist/static/js/2.a17e0fae.chunk.js",
-    "static/js/2.a17e0fae.chunk.js.map": "/react-masterclass-todolist/static/js/2.a17e0fae.chunk.js.map",
-    "index.html": "/react-masterclass-todolist/index.html",
-    "static/js/2.a17e0fae.chunk.js.LICENSE.txt": "/react-masterclass-todolist/static/js/2.a17e0fae.chunk.js.LICENSE.txt"
+    "main.js": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/main.b19b417e.chunk.js",
+    "main.js.map": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/main.b19b417e.chunk.js.map",
+    "runtime-main.js": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/runtime-main.aecbeb8d.js",
+    "runtime-main.js.map": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/runtime-main.aecbeb8d.js.map",
+    "static/js/2.57133184.chunk.js": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/2.57133184.chunk.js",
+    "static/js/2.57133184.chunk.js.map": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/2.57133184.chunk.js.map",
+    "index.html": "https://SeokyoungYou.github.io/react-masterclass-todolist/index.html",
+    "static/js/2.57133184.chunk.js.LICENSE.txt": "https://SeokyoungYou.github.io/react-masterclass-todolist/static/js/2.57133184.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.aad73123.js",
-    "static/js/2.a17e0fae.chunk.js",
-    "static/js/main.344b0e92.chunk.js"
+    "static/js/runtime-main.aecbeb8d.js",
+    "static/js/2.57133184.chunk.js",
+    "static/js/main.b19b417e.chunk.js"
   ]
 }
